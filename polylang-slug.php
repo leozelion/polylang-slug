@@ -15,9 +15,9 @@
  * Plugin Name:       Polylang Slug
  * Plugin URI:        https://github.com/grappler/polylang-slug
  * GitHub Plugin URI: https://github.com/grappler/polylang-slug
- * Description:       Allows same slug for multiple languages in Polylang
- * Version:           0.2.2
- * Author:            Ulrich Pogson
+ * Description:       Allows same slug for multiple languages in Polylang (fork)
+ * Version:           0.2.3
+ * Author:            Ulrich Pogson & Lev Zadumkin (fork)
  * Author URI:        http://ulrich.pogson.ch/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -28,7 +28,7 @@
 // Built using code from: https://wordpress.org/support/topic/plugin-polylang-identical-page-names-in-different-languages?replies=8#post-2669927
 
 // Check if PLL exists & the minimum version is correct.
-if ( ! defined( 'POLYLANG_VERSION' ) || version_compare( POLYLANG_VERSION, '1.7', '=<' ) || version_compare( $GLOBALS[ 'wp_version' ], '4.0', '=<' ) ) {
+if ( ! defined( 'POLYLANG_VERSION' ) || version_compare( POLYLANG_VERSION, '1.7', '<=' ) || version_compare( $GLOBALS[ 'wp_version' ], '4.0', '<=' ) ) {
 	add_action( 'admin_notices', 'polylang_slug_admin_notices' );
 	return;
 }
